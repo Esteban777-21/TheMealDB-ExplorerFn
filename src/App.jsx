@@ -1,8 +1,9 @@
-import { BrowserRouter, Routes, Route, NavLink, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Recetas from './Recetas';
 import DetalleReceta from './DetalleReceta';
 import Favoritos from './Favoritos';
 import Registro from './Registro';
+import Header from './components/Header';
 import './App.css';
 import { FavoritosProvider, useFavoritos } from './FavoritosContext';
 import { UsuariosProvider, useUsuarios } from './UsuariosContext';
@@ -13,11 +14,14 @@ function Inicio() {
       <section className="hero">
         <div className="hero-contenido">
           <p className="etiqueta">COCINA • DESCUBRE • DISFRUTA</p>
+
           <h1>Descubre tu próxima receta favorita</h1>
+
           <p>
             Explora recetas de todo el mundo, conoce nuevos sabores y encuentra
             inspiración para tu próxima comida.
           </p>
+
           <Link to="/lista" className="boton">
             Explorar recetas
           </Link>
@@ -43,20 +47,10 @@ function AppContenido() {
 
   return (
     <div className="aplicacion">
-      <header className="encabezado">
-        <Link to="/" className="logo">
-          TheMealDB Explorer
-        </Link>
-
-        <nav className="navegacion">
-          <NavLink to="/" end>
-            Inicio
-          </NavLink>
-          <NavLink to="/lista">Lista</NavLink>
-          <NavLink to="/favoritos">Favoritos ({favoritos.length})</NavLink>
-          <NavLink to="/registro">Registro ({usuarios.length})</NavLink>
-        </nav>
-      </header>
+      <Header
+        cantidadFavoritos={favoritos.length}
+        cantidadUsuarios={usuarios.length}
+      />
 
       <Routes>
         <Route path="/" element={<Inicio />} />
