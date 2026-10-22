@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 
-export default function Encabezado({ cantidadFavoritos, cantidadUsuarios }) {
+function Header({ cantidadFavoritos, cantidadUsuarios }) {
   return (
     <header className="encabezado">
       <Link to="/" className="logo">
@@ -21,3 +21,5 @@ export default function Encabezado({ cantidadFavoritos, cantidadUsuarios }) {
     </header>
   );
 }
+
+export default Header;
