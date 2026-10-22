@@ -100,25 +100,27 @@ Los datos se guardan localmente en el navegador y no corresponden a una base de 
 **Programa:** Ingeniería de Sistemas
 
 
+
 ## Capturas de pantalla
 
 ### Página de inicio
-![Página de inicio](public/capturas/inicio.png)
+![Página de inicio](public/inicio.png)
 
 ### Catálogo de recetas
-![Catálogo de recetas](public/capturas/catalogo.png)
+![Catálogo de recetas](public/catalogo.png)
 
 ### Detalle de una receta
-![Detalle de una receta](public/capturas/detalle.png)
+![Detalle de una receta](public/detalle.png)
 
 ### Favoritos
-![Página de favoritos](public/capturas/favoritos.png)
+![Página de favoritos](public/favoritos.png)
 
 ### Registro de usuarios
-![Registro de usuarios](public/capturas/registro.png)
+![Registro de usuarios](public/registro.png)
 
 ### Diseño adaptable
-![Diseño responsive](public/capturas/responsive.png)
+![Diseño responsive](public/responsive.png)
+
 
 
 ## Créditos
