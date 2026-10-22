@@ -1,0 +1,434 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #25251f;
+  background: #fffdf8;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.aplicacion {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.aplicacion > main,
+.aplicacion > section {
+  flex: 1;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+.encabezado {
+  min-height: 76px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: #fffdf8;
+  border-bottom: 1px solid #eee9df;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d85b32;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.navegacion a {
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navegacion a:hover,
+.navegacion a.active {
+  color: #d85b32;
+}
+
+/* PÁGINA DE INICIO */
+.inicio {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 530px;
+  margin: auto;
+  padding: 65px 7%;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  width: 100%;
+  padding: 45px;
+  background: #fff1e8;
+  border-radius: 24px;
+}
+
+.hero-contenido {
+  max-width: 700px;
+}
+
+.etiqueta {
+  color: #d85b32;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero-contenido h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.hero-contenido > p:not(.etiqueta) {
+  color: #69675f;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+/* BOTONES */
+.boton {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 6px 6px 6px 0;
+  border: none;
+  border-radius: 8px;
+  background: #d85b32;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.boton:hover {
+  background: #b84421;
+}
+
+/* CATÁLOGO */
+.catalogo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 7%;
+}
+
+.catalogo h2 {
+  font-size: 32px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.catalogo > p {
+  color: #69675f;
+  margin-bottom: 20px;
+}
+
+.buscador {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0 24px;
+  border: 1px solid #ddd5c9;
+  border-radius: 8px;
+  background: white;
+  font-size: 16px;
+}
+
+.etiqueta-filtro {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.filtro {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  margin-bottom: 28px;
+  border: 1px solid #ddd5c9;
+  border-radius: 8px;
+  background: white;
+  font-size: 15px;
+}
+
+/* TARJETAS DE RECETAS */
+.rejilla-recetas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.tarjeta-receta {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #eee9df;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 3px 12px rgba(37, 37, 31, 0.05);
+}
+
+.tarjeta-receta img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.contenido-tarjeta {
+  padding: 16px;
+}
+
+.contenido-tarjeta h3 {
+  overflow-wrap: anywhere;
+  margin-bottom: 10px;
+}
+
+.contenido-tarjeta p {
+  color: #69675f;
+  margin-top: 6px;
+}
+
+.cargar-mas {
+  margin-top: 28px;
+  font-size: 15px;
+}
+
+.contador-recetas {
+  margin-top: 18px;
+  color: #69675f;
+  font-size: 14px;
+}
+
+/* DETALLE DE RECETA */
+.detalle-receta {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 7%;
+}
+
+.detalle-receta h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 22px 0;
+}
+
+.detalle-receta h3 {
+  margin: 24px 0 12px;
+}
+
+.volver {
+  display: inline-block;
+  color: #d85b32;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.imagen-detalle {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 20px 0;
+}
+
+.informacion-detalle {
+  padding: 18px;
+  background: #fff1e8;
+  border-radius: 12px;
+}
+
+.informacion-detalle p {
+  margin: 8px 0;
+}
+
+.detalle-receta ul {
+  padding-left: 25px;
+}
+
+.detalle-receta li {
+  margin-bottom: 8px;
+}
+
+.instrucciones {
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+/* FORMULARIO DE REGISTRO */
+.catalogo form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 500px;
+  margin: 25px 0;
+}
+
+.catalogo form label {
+  font-weight: bold;
+}
+
+.catalogo form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd5c9;
+  border-radius: 8px;
+  background: white;
+}
+
+.catalogo form .boton {
+  margin-top: 8px;
+}
+
+[role='alert'],
+[role='status'] {
+  margin: 15px 0;
+}
+
+/* PIE DE PÁGINA */
+.pie,
+footer {
+  padding: 25px;
+  margin-top: auto;
+  text-align: center;
+  border-top: 1px solid #eee9df;
+  color: #69675f;
+  background: #fffdf8;
+  font-size: 13px;
+}
+
+.pie p {
+  margin: 5px 0;
+}
+
+.pie a,
+footer a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #d85b32;
+}
+
+/* TABLETAS */
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 5%;
+  }
+
+  .navegacion {
+    gap: 14px;
+  }
+
+  .inicio {
+    min-height: auto;
+    padding: 35px 5%;
+  }
+
+  .hero {
+    padding: 30px 24px;
+  }
+
+  .catalogo {
+    padding: 35px 5%;
+  }
+
+  .rejilla-recetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .tarjeta-receta img {
+    height: 170px;
+  }
+
+  .detalle-receta {
+    padding: 30px 5%;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .navegacion {
+    gap: 10px 16px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 25px 18px;
+    border-radius: 16px;
+  }
+
+  .hero-contenido h1 {
+    font-size: 32px;
+  }
+
+  .catalogo {
+    padding: 28px 18px;
+  }
+
+  .catalogo h2 {
+    font-size: 26px;
+  }
+
+  .rejilla-recetas {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tarjeta-receta img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .detalle-receta {
+    padding: 25px 18px;
+  }
+
+  .imagen-detalle {
+    height: auto;
+  }
+
+  .boton {
+    max-width: 100%;
+  }
+}
