@@ -99,16 +99,27 @@ Los datos se guardan localmente en el navegador y no corresponden a una base de 
 **Universidad:** Universidad Simón Bolívar  
 **Programa:** Ingeniería de Sistemas
 
+
 ## Capturas de pantalla
 
-Agregar capturas de pantalla de las siguientes secciones:
+### Página de inicio
+![Página de inicio](public/capturas/inicio.png)
 
-- Página de inicio.
-- Catálogo de recetas.
-- Detalle de una receta.
-- Página de favoritos.
-- Registro y administración de usuarios.
-- Diseño adaptable a diferentes tamaños de pantalla.
+### Catálogo de recetas
+![Catálogo de recetas](public/capturas/catalogo.png)
+
+### Detalle de una receta
+![Detalle de una receta](public/capturas/detalle.png)
+
+### Favoritos
+![Página de favoritos](public/capturas/favoritos.png)
+
+### Registro de usuarios
+![Registro de usuarios](public/capturas/registro.png)
+
+### Diseño adaptable
+![Diseño responsive](public/capturas/responsive.png)
+
 
 ## Créditos
 
